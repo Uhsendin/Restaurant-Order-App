@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  font-family: 'Smythe', sans-serif
+  
+}
+
+.container {
+  width: 600px;
+  margin: auto;
+  
+}
+
+h1 {
+    margin: 0;
+ font-size: 39px;
+ line-height: 24px;
+ color: #FFFFFF; 
+ margin-left: 46.7px; 
+ margin-bottom: 19px; 
+}
+
+p {
+font-size: 22.4216px;
+line-height: 14px;
+color: #FFFFFF;
+margin-left: 46.7px;
+}
+
+header {
+    background: url(./images/ferks-guare-KEZdWfYD-ow-unsplash.jpg);
+    background-size: cover;
+    height: 167px;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 46px;
+    
+}
