@@ -43,7 +43,7 @@ function orderTotal() {
       <p>$12</p>
     </div>
     </div>
-    <hr />
+    <hr id="total-hr" />
     <div class="order-total">
       <p>Total Price:</p>
       <p>$26</p>

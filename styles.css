@@ -6,6 +6,7 @@ body {
 .container {
   width: 600px;
   margin: auto;
+  background: #f5f5f5;
 }
 
 h1 {
@@ -111,6 +112,7 @@ hr {
 
 footer {
   width: 600px;
+ 
 }
 
 .order-title {
@@ -122,6 +124,73 @@ footer {
   font-size: 28px;
   line-height: 17px;
   color: #000000;
+}
+
+.order-top {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 62px;
+}
+
+.items-ordered p {
+  margin-left: 46px;
+  font-family: "Smythe";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 17px;
+}
+
+.items-ordered span {
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  color: #bbbbbb;
+  margin-left: 13px;
+  cursor: pointer;
+}
+.items-ordered span:hover {
+  color: #000000;
+}
+
+.price-of-order p {
+  margin: 28px 50px 28px 0;
+  font-family: "Smythe";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+#total-hr {
+  border: 2px solid #393333;
+}
+
+.order-total {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-total :first-child {
+  margin-left: 46px;
+  font-family: "Smythe";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 24px;
+}
+
+.order-total :last-child {
+  margin-top: 28px;
+  margin-right: 50px;
+  font-family: "Smythe";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #0e0e0e;
 }
 
 .complete-order-btn {
@@ -139,14 +208,5 @@ footer {
   line-height: 24px;
   color: #ffffff;
   cursor: pointer;
-}
-
-.order-top {
-  display: flex;
-  justify-content: space-between;
-}
-
-.order-total {
-  display: flex;
-  justify-content: space-between;
+  margin-bottom: 53px;
 }
