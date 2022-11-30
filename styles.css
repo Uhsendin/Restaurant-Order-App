@@ -51,7 +51,7 @@ main {
   display: flex;
 }
 
-span {
+.emoji {
   margin-right: 31px;
   font-size: 78.72px;
   line-height: 98px;
@@ -90,7 +90,7 @@ span {
   align-items: center;
 }
 
-button {
+.add-btn button {
   width: 50px;
   height: 50px;
   border: 1.5px solid #3c3c3c;
@@ -107,4 +107,46 @@ button {
 hr {
   border: 1px solid #d2d2d2;
   width: 504px;
+}
+
+footer {
+  width: 600px;
+}
+
+.order-title {
+  margin-top: 45px;
+  text-align: center;
+  font-family: "Smythe";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 17px;
+  color: #000000;
+}
+
+.complete-order-btn {
+  text-align: center;
+}
+
+.complete-order-btn button {
+  width: 508px;
+  height: 60px;
+  background: #16db99;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.order-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-total {
+  display: flex;
+  justify-content: space-between;
 }
