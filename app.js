@@ -67,32 +67,35 @@ function orderHtml() {
   return orderHtmlLayout;
 }
 
-function orderTotal() {
-  let total = ``;
+function getOrderHtml() {
 
-  menuArray.forEach(function (order) {
-    total += `<div class="order-item">
-    <div class="order-item-content1">
-      <p class="food-name">${order.name}</p>
-      <button class="remove-from-order" data-remove="${order.id}">
-        remove
-      </button>
-      <p class="food-quantity">X${order.quantity}</p>
-    </div>
+  let orderHtml = ``
+  orderArray.forEach(function (item) {
+      orderHtml +=
+          `
+       
+                    <div class="order-item">
+                      <div class="order-item-content1">
+                          <p class="food-name">${item.name}</p>
+                          <button class="remove-from-order" data-remove="${item.id}">remove</button>
+                          <p class="food-quantity">X${item.quantity}</p>
+                      </div>
+                    
+                      <div class="order-item-content2">
+                          <p class="food-price">$${item.price * item.quantity}</p>
+                      </div>
+                      </div>
+    
+     `
+  })
 
-    <div class="order-item-content-2">
-      <p class="food-price">$${order.price * order.quantity}</p>
-    </div>
-  </div>
-  `;
-  });
-  return total;
+  return orderHtml
 }
 
 
 function render() {
   document.getElementById('menu-content').innerHTML = orderHtml()
-  document.getElementById('order-display').innerHTML = orderTotal()
+  document.getElementById('order-display').innerHTML = getOrderHtml()
 }
 
 render()
