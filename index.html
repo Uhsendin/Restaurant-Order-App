@@ -19,9 +19,23 @@
         <h1>Brandon's Diner</h1>
         <p>The best burgers and pizzas in town.</p>
       </header>
-      <main id="menu-content"></main>
-      <footer>
-      </footer>
+      <main>
+        <section id="menu-content"></section>
+        <section class="order-section" id="section">
+          <div class="your-order">
+            <h4 class="order hidden" id="order">Your Order</h4>
+          </div>
+          <div class="order-display" id="order-display"><!-- order goes here --></div>
+
+          <div class="total-price hidden" id="total">
+            <p id="total-price">$0</p>
+            <p>Total Price:</p>
+          </div>
+        </section>
+        <div class="btn-content">
+          <button class="complete-btn hidden" id="complete-btn">Complete Order</button>
+        </div>
+      </main>
     </div>
     <script src="app.js" type="module"></script>
   </body>
