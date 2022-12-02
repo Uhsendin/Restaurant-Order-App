@@ -4,13 +4,16 @@ let orderArray = []
 let totalPrice = 0
 const totalPriceEl = document.getElementById("total-price")
 
+
+
+
 document.getElementById("total").style.display = "none"
 
 document.addEventListener("click", function(e) {
   if (e.target.dataset.food) {
     handleFoodClick(e.target.dataset.food)
   } else if (e.target.dataset.remove) {
-
+handleRemoveClick(e.target.dataset.remove)
   }
 })
 
@@ -28,7 +31,7 @@ targetFoodObj.quantity = 1
 }
 
 totalPrice += targetFoodObj.price
-totalPriceEl.textContent = `${totalPrice}`
+totalPriceEl.textContent = `$${totalPrice}`
 
 if (menuArray.length > 0) {
   document.getElementById("total").style.display = "flex"
@@ -43,6 +46,27 @@ render()
 
 
 
+}
+
+function handleRemoveClick(item) {
+let targetFoodObj = orderArray.filter(function(itemRemove) {
+  return item == itemRemove.id
+})[0]
+
+if(targetFoodObj.quantity >1) {
+  targetFoodObj.quantity--
+} else {
+  let itemIndex = orderArray.indexOf(targetFoodObj)
+  orderArray.splice(itemIndex, 1)
+}
+totalPrice -= targetFoodObj.price
+totalPriceEl.textContent = `$${totalPrice}`
+
+if (orderArray.length < 1) {
+  document.getElementById("complete-btn").classList.remove("hidden")
+  document.getElementById("section").classList.remove("hidden")
+}
+render()
 }
 
 function orderHtml() {
