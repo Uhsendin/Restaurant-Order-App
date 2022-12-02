@@ -4,6 +4,8 @@ let orderArray = []
 let totalPrice = 0
 const totalPriceEl = document.getElementById("total-price")
 
+document.getElementById("total").style.display = "none"
+
 document.addEventListener("click", function(e) {
   if (e.target.dataset.food) {
     handleFoodClick(e.target.dataset.food)
@@ -29,6 +31,7 @@ totalPrice += targetFoodObj.price
 totalPriceEl.textContent = `${totalPrice}`
 
 if (menuArray.length > 0) {
+  document.getElementById("total").style.display = "flex"
   document.getElementById("total").classList.remove("hidden")
   document.getElementById("order").classList.remove("hidden")
 }
