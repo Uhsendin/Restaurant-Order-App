@@ -3,6 +3,7 @@ import { menuArray } from "./data.js";
 let orderArray = []
 let totalPrice = 0
 const totalPriceEl = document.getElementById("total-price")
+const formContainer = document.getElementById("form-container")
 
 
 
@@ -14,6 +15,9 @@ document.addEventListener("click", function(e) {
     handleFoodClick(e.target.dataset.food)
   } else if (e.target.dataset.remove) {
 handleRemoveClick(e.target.dataset.remove)
+  } else if (e.target.id === "complete-btn") {
+    completeOrder()
+    
   }
 })
 
@@ -67,6 +71,10 @@ if (orderArray.length < 1) {
   document.getElementById("section").classList.remove("hidden")
 }
 render()
+}
+
+function completeOrder() {
+  formContainer.style.display = "block"
 }
 
 function orderHtml() {
