@@ -220,3 +220,76 @@ hr {
 .complete-btn:hover {
   background: #07eea1;
 }
+
+.form-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 524px;
+  height: 542.24px;
+  background: #ffffff;
+  border-radius: 3.88991px;
+  text-align: center;
+}
+
+.form-title {
+  margin-top: 47px;
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+  margin-bottom: 46px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.payment input {
+  border: 1.29664px solid #757575;
+  border-radius: 3.88991px;
+  width: 445.91px;
+  height: 71.3px;
+  margin-bottom: 23px;
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 31px;
+  color: #757575;
+  padding-left: 26px;
+}
+
+.form-cvv {
+  margin-bottom: 20px;
+}
+
+.pay-btn {
+  margin-top: 0;
+  background: #16db99;
+  border-radius: 3.88991px;
+  width: 475.91px;
+  height: 71.3px;
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 31px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.pay-btn:hover {
+  background: #03faa8;
+}

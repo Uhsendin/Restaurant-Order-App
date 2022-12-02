@@ -25,7 +25,9 @@
           <div class="your-order">
             <h4 class="order hidden" id="order">Your Order</h4>
           </div>
-          <div class="order-display" id="order-display"><!-- order goes here --></div>
+          <div class="order-display" id="order-display">
+            <!-- order goes here -->
+          </div>
 
           <div class="total-price hidden" id="total">
             <p id="total-price">$0</p>
@@ -33,7 +35,29 @@
           </div>
         </section>
         <div class="btn-content">
-          <button class="complete-btn hidden" id="complete-btn">Complete Order</button>
+          <button class="complete-btn hidden" id="complete-btn">
+            Complete Order
+          </button>
+        </div>
+
+        <div class="form-container hidden">
+          <h3 class="form-title">Enter card details</h3>
+          <form>
+            <div class="payment">
+              <div class="form-name" id="form-name">
+                <input type="text" placeholder="Enter your name" value="" name="username" required>
+              </div>
+              <div class="form-card-num">
+                <input type="number" placeholder="Enter card number" value="" name="cardnumber" required>
+              </div>
+              <div class="form-cvv">
+                <input type="number" placeholder="Enter CVV" value="" name="cvv" required>
+              </div>
+              <div class="form-btn">
+                <button type="submit" class="pay-btn" id="pay-btn">Pay</button>
+              </div>
+            </div>
+          </form>
         </div>
       </main>
     </div>
