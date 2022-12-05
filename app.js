@@ -2,8 +2,11 @@ import { menuArray } from "./data.js";
 
 let orderArray = []
 let totalPrice = 0
+const messageEl = document.getElementById("messageEl")
 const totalPriceEl = document.getElementById("total-price")
 const formContainer = document.getElementById("form-container")
+const userName = document.getElementById("username")
+const submitForm = document.getElementById("modal-form")
 
 
 
@@ -16,8 +19,9 @@ document.addEventListener("click", function(e) {
   } else if (e.target.dataset.remove) {
 handleRemoveClick(e.target.dataset.remove)
   } else if (e.target.id === "complete-btn") {
-    completeOrder()
-    
+    completeOrder() 
+  } else if (e.target.id === "pay-btn") {
+    pay()
   }
 })
 
@@ -75,6 +79,31 @@ render()
 
 function completeOrder() {
   formContainer.style.display = "block"
+}
+
+
+function message() {
+  messageEl.classList.remove("hidden")
+  const firstName = userName.value.split(" ")[0]
+  messageEl.textContent = `Thanks, ${firstName} your order is on the way!`
+}
+
+function pay() {
+  document.getElementById("complete-btn").classList.add("hidden")
+  document.getElementById("section").classList.add("hidden")
+
+  formContainer.style.display = "none"
+  message()
+  reset()
+  
+}
+
+function reset() {
+  setTimeout(function () {
+    messageEl.classList.add("hidden")
+    window.location.reload()
+  }, 5000)
+  
 }
 
 function orderHtml() {

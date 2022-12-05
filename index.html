@@ -42,23 +42,44 @@
 
         <div class="form-container hidden" id="form-container">
           <h3 class="form-title">Enter card details</h3>
-          <form>
+          <form id="modal-form">
             <div class="payment">
               <div class="form-name" id="form-name">
-                <input type="text" placeholder="Enter your name" value="" name="username" required>
+                <input
+                  id="username"
+                  type="text"
+                  placeholder="Enter your name"
+                  value=""
+                  name="username"
+                  required
+                />
               </div>
               <div class="form-card-num">
-                <input type="number" placeholder="Enter card number" value="" name="cardnumber" required>
+                <input
+                  type="number"
+                  placeholder="Enter card number"
+                  value=""
+                  name="cardnumber"
+                  required
+                />
               </div>
               <div class="form-cvv">
-                <input type="number" placeholder="Enter CVV" value="" name="cvv" required>
+                <input
+                  type="number"
+                  placeholder="Enter CVV"
+                  value=""
+                  name="cvv"
+                  required
+                />
               </div>
               <div class="form-btn">
-                <button type="submit" class="pay-btn" id="pay-btn">Pay</button>
+                <button type="reset"  class="pay-btn" id="pay-btn">Pay</button>
               </div>
             </div>
           </form>
         </div>
+
+        <div class="message hidden" id="messageEl">Thanks, your order is on the way! </div>
       </main>
     </div>
     <script src="app.js" type="module"></script>
